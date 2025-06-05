@@ -44,7 +44,6 @@ header {
     position: sticky;
     top: 0; 
     z-index: 1000;
-    /* padding: 0 15%;  */
     transition: transform 0.3s ease-in-out;
     border-bottom: 4px solid wheat;
 }
@@ -261,7 +260,7 @@ header a:active {
 }
 
 /* Sobre ------------------------------------ */
-.sobre{
+#sobre{
     color: #fff;
     background-color: var(--cor-base);
     display: flex;
@@ -273,7 +272,7 @@ header a:active {
     position: relative;
 }
 
-.sobre h1::after {
+#sobre h1::after {
     content: "";
     display: block;
     width: 230px; 
@@ -282,7 +281,7 @@ header a:active {
     margin: 12px auto 0 auto;
 }
 
-.sobre p{
+#sobre p{
     display: flex;
     text-align: justify;
     font-size: 19px;
@@ -454,6 +453,7 @@ header a:active {
 .autor-depoimento-imagem img{
     width: 100px;
     height: 100px;
+    object-fit: fill;
     border-radius: 50%;
 }
 
@@ -768,27 +768,77 @@ footer {
 }
 
 /* Media query ------------------------------------------------ */
+@media screen and (max-width: 980px){
+    .conteudo-titulo{
+        top: 17%;
+        padding: 20px;
+    }
+
+    .conteudo-titulo h1{
+        font-size: 30px;
+    }
+
+    .conteudo-titulo h3{
+        font-size: 18px;
+    }
+
+    .servicos-card{
+        width: 220px;
+        height: 220px;
+        padding: 20px;
+    }
+
+    .contato-dados{
+        padding: 30px 30px 30px 40px;
+        height: 450px;
+    }
+
+    .contato-item{
+        gap: 20px;
+    }
+
+    .contato-item i{
+        font-size: 40px;
+    }
+
+    .contato-txt h3{
+        font-size: 20px;
+        text-align: start;
+    }
+
+    .contato-txt p{
+        font-size: 16px;
+    }
+
+    .contato-item .icone{
+        width: 40px;
+        height: 40px;
+
+    }
+}
+
+
 @media screen and (max-width: 576px) {
 
     #menu-btn {
-        display: none;
+        display: flex;
+        position: absolute; 
         background: none;
-        border: none;
         color: white;
-        font-size: 1.8rem;
-        cursor: pointer;
-        position: relative; 
-        z-index: 10;
-        transition: color 0.3s ease;
+        font-size: 1.9em;
+        right: 10px;
         width: 50px; 
         height: 50px;
-        display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 12;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
     }
 
     #menu-btn :hover {
-        color: #d3d3d3; 
+        color: wheat; 
     }
 
     #menu-btn::before {
@@ -810,32 +860,54 @@ footer {
         height: 50px;
     }
 
+    #menu{
+        justify-content: space-around !important;
+        display: flex;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    header{
+        display: flex;
+        align-items: center !important;
+        justify-content: center;
+        position: relative;
+    }
+    
     header ul {
         z-index: 11;
         flex-direction: column;
         position: absolute;
-        top: 3.9em;
+        font-size: 20px;
+        top: 4.5em;
         right: 0;
         width: 100%;
         background-color: var(--cor-base);
-        padding: 10px 0;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-100%);
+        transform: translateX(100%);
         transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     }
 
     header ul li {
         text-align: center;
-        margin: 10px 0;
-        padding: 10px;
+        margin: 0;
+        padding: 15px;
+
     }
 
     header ul.show {
         z-index: 12;
         opacity: 1;
         visibility: visible;
-        transform: translateX(0)
+        transform: translateX(0);
+    }
+
+    .link-logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
     }
 
     .conteudo-titulo{
@@ -865,7 +937,7 @@ footer {
         font-size: 22px;
     }
 
-    .sobre{
+    #sobre{
         padding: 30px 20px;
     }
 
