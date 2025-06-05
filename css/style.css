@@ -35,17 +35,18 @@ header {
     display: flex;
     font-weight: 600;
     font-size: 17px;
-    height: 5em;
+    height: 5.5em;
     align-items: center;
     justify-content: space-between;
     color: white;
     padding: 0 30px;
     box-sizing: border-box;
-    position:sticky;
+    position: sticky;
     top: 0; 
     z-index: 1000;
-    padding: 0 15%; 
+    /* padding: 0 15%;  */
     transition: transform 0.3s ease-in-out;
+    border-bottom: 4px solid wheat;
 }
 
 header ul {
@@ -59,22 +60,42 @@ header ul li {
     transition: all 0.3s ease;
 }
 
+.link-logo {
+    display: flex;
+    align-items: center;
+}
+
 #logo img {
     width: 80px;
     height: auto;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 10px; 
+    padding: 0;
+    margin: 0;
+}
+
 header a {
     position: relative;
     text-decoration: none; 
-    padding: 10px;
-    color: inherit; 
+    padding: 15px;
+    color: inherit;
 }
 
 header a:link,
 header a:visited {
     color: white;
-    padding: 15px;
+    padding: 10px;
 }
 
 header a::after {
@@ -96,7 +117,7 @@ header a:hover::after {
 }
 
 header a:active {
-    color: rgba(136, 136, 136, 0.8);
+    color: wheat;
 }
 
 .link-logo:after{
@@ -736,6 +757,8 @@ footer {
     padding: 20px 0;
     font-size: 18px;
     height: 50px;
+    border-top: 4px solid wheat;
+
 }
 
 .rodape{
