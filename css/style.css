@@ -6,11 +6,18 @@ html, body{
 }
 
 :root{
-    --cor-base: #a15697;
+    --primary-color: #a13044;
+    --secondary-color: #d7adb9;
+    --primary-text: #fff;
+    --secondary-text: #000000;
 }
 
 a {
     text-decoration: none;
+}
+
+h2{
+    font-size: 2em;
 }
 
 .container {
@@ -25,27 +32,27 @@ a {
     left: 0;
     width: 100%;
     height: 50px;
-    fill: var(--cor-base);
+    fill: var(--primary-color);
     filter: brightness(1.2);
 }
 
 /* Menu ------------------------------------------------------- */
 header {
-    background-color: var(--cor-base);
+    background-color: var(--primary-color);
     display: flex;
     font-weight: 600;
     font-size: 17px;
     height: 5.5em;
     align-items: center;
     justify-content: space-between;
-    color: white;
+    color: var(--primary-text);
     padding: 0 30px;
     box-sizing: border-box;
     position: sticky;
     top: 0; 
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
-    border-bottom: 4px solid wheat;
+    border-bottom: 4px solid var(--secondary-color);
 }
 
 header ul {
@@ -93,7 +100,7 @@ header a {
 
 header a:link,
 header a:visited {
-    color: white;
+    color: var(--primary-text);
     padding: 10px;
 }
 
@@ -102,7 +109,7 @@ header a::after {
     position: absolute;
     left: 50%;
     bottom: 0;
-    color: wheat;
+    color: var(--secondary-color);
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     width: 100%;
@@ -116,7 +123,7 @@ header a:hover::after {
 }
 
 header a:active {
-    color: wheat;
+    color: var(--secondary-color);
 }
 
 .link-logo:after{
@@ -130,7 +137,7 @@ header a:active {
 
 /* Back to top -------------------------------------------------- */
 .btt{
-    background-color: var(--cor-base);
+    background-color: var(--primary-color);
     width: 70px;
     height: 70px;
     border: 1px solid rgba(255, 255, 255, 0.336);
@@ -157,7 +164,7 @@ header a:active {
     display: flex;
     border: none;
     background-color: transparent;
-    color: #fff;
+    color: var(--primary-text);
     font-size: 2.7em;
     box-sizing: border-box;
     align-items: center;
@@ -198,7 +205,7 @@ header a:active {
 }
 
 .btn-home{
-    color: white;
+    color: var(--primary-text);
     display: flex;
     font-size: 24px;
     font-weight: 600;
@@ -206,7 +213,7 @@ header a:active {
     border-radius: 15px;
     box-sizing: border-box;
     left: 20%;
-    background: var(--cor-base);
+    background: var(--primary-color);
     cursor: pointer;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
@@ -238,7 +245,7 @@ header a:active {
     margin-left: auto;
     margin-right: auto;
     background-color: #111;
-    color: white;
+    color: var(--primary-text);
     letter-spacing: 1px;
     border-radius: 20px;
     padding: 20px;
@@ -261,8 +268,8 @@ header a:active {
 
 /* Sobre ------------------------------------ */
 #sobre{
-    color: #fff;
-    background-color: var(--cor-base);
+    color: var(--primary-text);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -272,12 +279,12 @@ header a:active {
     position: relative;
 }
 
-#sobre h1::after {
+#sobre h2::after {
     content: "";
     display: block;
     width: 230px; 
     height: 4px;
-    background: wheat;
+    background: var(--secondary-color);
     margin: 12px auto 0 auto;
 }
 
@@ -289,21 +296,21 @@ header a:active {
 }
 
 /* Serviços -------------------------------------- */
-.servicos h1{
+.servicos h2{
     font-size: 36px;
     margin: 10px;
 }
 
-.servicos h1::after {
+.servicos h2::after {
     content: "";
     display: block;
     width: 160px; 
     height: 4px;
-    background: var(--cor-base);
+    background: var(--primary-color);
     margin: 12px auto 0 auto;
 }
 
-.servicos h2{
+.servicos h3{
     margin: 10px;
     font-size: 22px;
 }
@@ -347,7 +354,7 @@ header a:active {
     position: absolute;
     bottom: -100%;
     left: 0;
-    background: var(--cor-base);
+    background: var(--primary-color);
     width: 100%;
     height: 100%;
     transition: 0.4s;
@@ -377,12 +384,12 @@ header a:active {
 
 .servicos-card i{
     font-size: 65px;
-    color: var(--cor-base);
+    color: var(--primary-color);
     position: relative;
 }
 
 .btn-servicos{
-    color: rgb(255, 255, 255);
+    color: var(--primary-text);
     display: flex;
     text-align: center;
     align-items: center;
@@ -394,7 +401,7 @@ header a:active {
     padding: 30px 30px;
     border-radius: 15px;
     box-sizing: border-box;
-    background: var(--cor-base);
+    background: var(--primary-color);
     cursor: pointer;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
@@ -408,7 +415,7 @@ header a:active {
 
 /* Depoimentos ------------------------------- */
 #depoimentos{
-    background-color: var(--cor-base);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -416,23 +423,24 @@ header a:active {
     gap: 35px;
     padding: 50px 3%;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--primary-text);
     flex-wrap: nowrap;
     overflow: visible;
     position: relative;
 }
 
-.depoimento-header h1 {
+.depoimento-header h2 {
     font-size: 36px;
     margin: 10px;
+    text-align: center;
 }
 
-.depoimento-header h1::after {
+.depoimento-header h2::after {
     content: "";
     display: block;
     width: 230px; 
     height: 4px;
-    background: wheat;
+    background: var(--secondary-color);
     margin: 12px auto 0 auto;
 }
 
@@ -513,7 +521,7 @@ header a:active {
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: wheat !important;
+    color: var(--secondary-color) !important;
     font-weight: bold;
     position: absolute;
     top: 50%;
@@ -535,13 +543,13 @@ header a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-base);
+    background-color: var(--primary-color);
     height: 50px;
     width: 100% !important;
 }
 
 .swiper-pagination-bullet {
-    background-color: wheat !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .swiper-slide {
@@ -589,7 +597,7 @@ header a:active {
     z-index: 1;
 }
 
-.banner h1, .banner p{
+.banner h2, .banner p{
     margin: 10px;
 }
 
@@ -606,7 +614,7 @@ header a:active {
     padding: 30px 30px;
     border-radius: 15px;
     box-sizing: border-box;
-    background: var(--cor-base);
+    background: var(--primary-color);
     cursor: pointer;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
@@ -621,7 +629,7 @@ header a:active {
 /* Contato ------------------------------------ */
 #contato{
     color: #fff;
-    background-color: var(--cor-base);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -631,17 +639,17 @@ header a:active {
     position: relative;
 }
 
-.contato-header h1 {
+.contato-header h2 {
     font-size: 36px;
     margin: 10px;
 }
 
-.contato-header h1::after {
+.contato-header h2::after {
     content: "";
     display: block;
     width: 150px; 
     height: 4px;
-    background: wheat;
+    background: var(--secondary-color);
     margin: 12px auto 0 auto;
 }
 
@@ -674,7 +682,7 @@ header a:active {
 
 .contato-item i{
     font-size: 56px;
-    color: var(--cor-base);
+    color: var(--primary-color);
 }
 
 .contato-item .icone{
@@ -728,17 +736,17 @@ header a:active {
     box-sizing: border-box;
 }
 
-.redes-sociais-header h1 {
+.redes-sociais-header h2 {
     font-size: 36px;
     margin-bottom: 30px;
 }
 
-.redes-sociais-header h1::after {
+.redes-sociais-header h2::after {
     content: "";
     display: block;
     width: 240px; 
     height: 4px;
-    background: wheat;
+    background: var(--secondary-color);
     margin: 12px auto 0 auto;
 }
 
@@ -750,7 +758,7 @@ header a:active {
 }
 
 .redes-icones i {
-    color: rgb(255, 255, 255);
+    color: var(--primary-text);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -766,7 +774,7 @@ header a:active {
     transform-origin: center;
     width: 100%;
     height: 3px;
-    background-color: wheat;
+    background-color: var(--secondary-color);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -785,7 +793,7 @@ footer {
     padding: 20px 0;
     font-size: 18px;
     height: 50px;
-    border-top: 4px solid wheat;
+    border-top: 4px solid var(--secondary-color);
 
 }
 
@@ -802,7 +810,7 @@ footer {
         padding: 20px;
     }
 
-    .conteudo-titulo h1{
+    .conteudo-titulo h2{
         font-size: 30px;
     }
 
@@ -846,6 +854,14 @@ footer {
 
 @media screen and (max-width: 576px) {
 
+    h2{
+        font-size: 30px !important;
+    }
+
+    .btt{
+        display: none;
+    }
+
     #menu-btn {
         display: flex;
         position: absolute; 
@@ -853,18 +869,19 @@ footer {
         color: white;
         font-size: 1.9em;
         right: 10px;
-        width: 50px; 
-        height: 50px;
+        width: 40px; 
+        height: 40px;
         align-items: center;
         justify-content: center;
         z-index: 12;
         border: none;
         cursor: pointer;
         transition: color 0.3s ease;
+        box-sizing: border-box;
     }
 
     #menu-btn :hover {
-        color: wheat; 
+        color: var(--secondary-color);
     }
 
     #menu-btn::before {
@@ -874,7 +891,7 @@ footer {
         left: 50%;
         width: 0;
         height: 0;
-        background-color: rgba(148, 148, 148, 0.1); 
+        background-color: rgba(148, 148, 148, 0.1);
         border-radius: 50%;
         transform: translate(-50%, -50%);
         transition: width 0.3s ease, height 0.3s ease;
@@ -898,6 +915,7 @@ footer {
         align-items: center !important;
         justify-content: center;
         position: relative;
+        height: 4em;
     }
     
     header ul {
@@ -908,18 +926,19 @@ footer {
         top: 4.5em;
         right: 0;
         width: 100%;
-        background-color: var(--cor-base);
+        background-color: var(--primary-color);
         opacity: 0;
         visibility: hidden;
-        transform: translateX(100%);
+        transform: translateY(-70%);
         transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     header ul li {
         text-align: center;
         margin: 0;
         padding: 15px;
-
     }
 
     header ul.show {
@@ -927,6 +946,11 @@ footer {
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
+    }
+
+    .link-logo img{
+        width: 70px !important;
+        height: auto;
     }
 
     .link-logo{
@@ -944,7 +968,12 @@ footer {
         position: relative;
     }
 
-    .conteudo-titulo h1{
+    .btn-home{
+        padding: 15px 25px;
+        font-size: 1.3em !important;
+    }
+
+    .conteudo-titulo h2{
         font-size: 26px;
         padding: 0;
         margin: 0;
@@ -967,8 +996,15 @@ footer {
         padding: 30px 20px;
     }
 
+    #sobre h2::after {
+        width: 210px; 
+    }
     .servicos{
         padding: 30px 20px 30px 20px;
+    }
+
+    .servicos h2::after {
+        width: 130px; 
     }
 
     .servicos h2{
@@ -988,6 +1024,10 @@ footer {
 
     #depoimentos{
         padding: 50px 0;
+    }
+
+    .depoimento-header h2::after {
+        width: 190px; 
     }
 
     .swiper {
@@ -1029,7 +1069,7 @@ footer {
         padding: 20px;
     }
 
-    .banner h1{
+    .banner h2{
         font-size: 24px;
         text-align: center;
     }
@@ -1047,6 +1087,10 @@ footer {
 
     #contato{
         padding: 20px 0;
+    }
+
+    .contato-header h2::after {
+        width: 115px; 
     }
 
     .contato-wrapper{
@@ -1096,7 +1140,7 @@ footer {
 
     .contato-item i{
         font-size: 40px !important;
-        color: var(--cor-base);
+        color: var(--primary-color);
     }
 
     .contato-mapa{
@@ -1104,6 +1148,10 @@ footer {
         height: 300px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .redes-sociais-header h2::after {
+        width: 210px; 
     }
 
     .redes-icones{
@@ -1116,6 +1164,8 @@ footer {
     footer{
         font-size: 14px;
         font-weight: 500;
+        height: 3em !important;
+        padding: 10px !important;
     }
 
 }

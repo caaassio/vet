@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// ---------------------- Back to Top ----------------------
+
 const btt = document.getElementById('backToTop');
 
 if (btt) {
