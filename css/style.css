@@ -923,7 +923,7 @@ footer {
         flex-direction: column;
         position: absolute;
         font-size: 20px;
-        top: 4.5em;
+        top: 3.3em;
         right: 0;
         width: 100%;
         background-color: var(--primary-color);
